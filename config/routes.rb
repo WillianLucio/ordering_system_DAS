@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+root "home#index"
+
+  get 'clients/destroy'
+
   get 'clients/index'
 
   get 'clients/create'
@@ -8,8 +12,4 @@ Rails.application.routes.draw do
   get 'clients/edit'
 
   get 'clients/update'
-
-  get 'clients/destroy'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
