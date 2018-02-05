@@ -42,6 +42,7 @@ gem 'popper_js', '~> 1.12.9'
 group :test do
   gem 'factory_bot_rails'
   gem 'ffaker'
+  gem 'rails-controller-testing'
 end
 
 group :development, :test do
