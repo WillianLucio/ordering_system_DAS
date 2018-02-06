@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <a class="btn btn-primary" href="<%= new_client_path %>" role="button">Add</a>
+      <a class="btn btn-primary" href="<%= new_product_path %>" role="button">Add</a>
     </div>
   </div>
 
@@ -11,24 +11,24 @@
         <thead>
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Phone</th>
+              <th scope="col">Description</th>
+              <th scope="col">Value</th>
               <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
-          <% @clients.each do |c| %>
+          <% @products.each do |p| %>
             <tr>
-              <th scope="row"><%= c.id %></th>
-              <td><%= c.name %></td>
-              <td><%= c.phone %></td>
+              <th scope="row"><%= p.id %></th>
+              <td><%= p.description %></td>
+              <td><%= p.value %></td>
               <td>
                 <div class="row">
                   <div class="col-lg-2 col-md-3 col-sm-3">
-                    <a class="btn btn-warning" href="<%= "/clients/#{c.id}/edit"%>" role="button">Edit</a>
+                    <a class="btn btn-warning" href="<%= "/products/#{p.id}/edit"%>" role="button">Edit</a>
                   </div>
                   <div class="col-lg-2 col-md-3 col-sm-3">
-                    <%= button_to "delete", c, :method => :delete, class: "btn btn-danger" %>
+                    <%= button_to "delete", p, :method => :delete, class: "btn btn-danger" %>
                   </div>
               </div>
               </td>
