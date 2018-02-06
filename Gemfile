@@ -5,10 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "bootstrap_form",
-    git: "https://github.com/bootstrap-ruby/bootstrap_form.git",
-    branch: "master"
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -38,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 gem 'popper_js', '~> 1.12.9'
+gem 'simple_form'
+gem "cocoon"
 
 group :test do
   gem 'factory_bot_rails'

@@ -1,5 +1,5 @@
-<%= bootstrap_form_for(@product) do |f| %>
-  <%= f.text_field :description %>
-  <%= f.number_field :value, placeholder: "50.00", prepend: "$"%>
+<%= simple_form_for(@product) do |f| %>
+  <%= f.input :description %>
+  <%= f.input :value, placeholder: "50.00"%>
   <%= f.submit "Save" %>
 <% end %>

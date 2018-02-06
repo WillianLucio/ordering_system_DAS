@@ -1,5 +1,5 @@
-<%= bootstrap_form_for(@client) do |f| %>
-  <%= f.text_field :name %>
-  <%= f.phone_field :phone%>
+<%= simple_form_for(@client) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :phone%>
   <%= f.submit "Save" %>
 <% end %>
