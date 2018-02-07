@@ -1,5 +1,7 @@
-<%= simple_form_for(@client) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :phone%>
-  <%= f.submit "Save" %>
-<% end %>
+<div class="container">
+  <%= simple_form_for(@client) do |f| %>
+    <%= f.input :name%>
+    <%= f.input :phone%>
+    <%= f.submit "Save Client", class: "btn btn-success"%>
+  <% end %>
+</div>

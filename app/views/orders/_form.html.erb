@@ -15,9 +15,11 @@
     </div>
 
     <div class="row">
-      <%= link_to_add_association('Add Products', f, :order_products, class: "btn btn-primary") %>
+      <%= link_to_add_association('Add Products', f, :order_products, class: "btn btn-primary add_products_order") %>
     </div>
 
-    <%= f.submit "Save", class: "btn btn-success" %>
+    <div class="row">
+      <%= f.submit "Save Order", class: "btn btn-success save_order" %>
+    </div>
   <% end %>
 </div>

@@ -1,5 +1,7 @@
-<%= simple_form_for(@product) do |f| %>
-  <%= f.input :description %>
-  <%= f.input :value, placeholder: "50.00"%>
-  <%= f.submit "Save" %>
-<% end %>
+<div class="container">
+  <%= simple_form_for(@product) do |f| %>
+    <%= f.input :description %>
+    <%= f.input :value, placeholder: "50.00"%>
+    <%= f.submit "Save Product", class: "btn btn-success" %>
+  <% end %>
+</div>
