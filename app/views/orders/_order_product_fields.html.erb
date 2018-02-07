@@ -1,0 +1,13 @@
+<div class="nested-fields">
+  <div class="row">
+    <div class="col-5">
+      <%= f.association :product, label_method: :description, value_method: :id %>
+    </div>
+    <div class="col-5">
+      <%= f.input :quantity %>
+    </div>
+    <div class="col-2 align-self-center">
+      <%= link_to_remove_association('remove', f, class: "btn btn-primary") %>
+    </div>
+  </div>
+</div>

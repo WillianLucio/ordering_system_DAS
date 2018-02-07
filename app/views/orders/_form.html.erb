@@ -1,4 +1,23 @@
-<%= simple_form_for(@order) do |f| %>
-  <%= f.association :client %>
-  <%= f.submit "Save" %>
-<% end %>
+<div class="container">
+  <%= simple_form_for(@order) do |f| %>
+    <div class="row">
+      <div class="col">
+          <%= f.association :client %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <%= f.fields_for :order_products do |product_fields| %>
+          <%= render partial: "order_product_fields", locals: { f: product_fields } %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row">
+      <%= link_to_add_association('Add Products', f, :order_products, class: "btn btn-primary") %>
+    </div>
+
+    <%= f.submit "Save", class: "btn btn-success" %>
+  <% end %>
+</div>

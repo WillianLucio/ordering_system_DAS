@@ -7,7 +7,6 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-
     respond_to do |format|
       if @order.save
         format.html { redirect_to orders_path }
@@ -43,11 +42,10 @@ class OrdersController < ApplicationController
   end
 
   def order_params
-    params.require(:order).permit(:client_id)
+    params.require(:order).permit(:client_id, order_products_attributes: [:id, :product_id, :quantity, :_destroy])
   end
 
   def set_order
-    puts "aaaaaaaaaaaaaaa#{params.inspect}"
     @order = Order.find(params[:id])
   end
 end
