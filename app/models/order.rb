@@ -4,4 +4,6 @@ class Order < ApplicationRecord
   has_many :products, through: :order_products
 
   accepts_nested_attributes_for :order_products, reject_if: :all_blank, allow_destroy: true
+
+  validates :client_id, presence: true
 end
